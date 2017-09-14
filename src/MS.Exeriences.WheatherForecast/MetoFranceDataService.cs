@@ -1,18 +1,19 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MS.Exeriences.WheatherForecast
 {
     public class MeteoFranceDataService
     {
-
+        private ILog log = log4net.LogManager.GetLogger(typeof(MeteoFranceDataService));
 
         public IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
         {
+            log.Info($"Gathering weather from index {startDateIndex}");
+
             int temperatureMinimum = Int32.Parse(ConfigurationManager.AppSettings["TemperatureMinimum"]);
             int temperatureMaximum = Int32.Parse(ConfigurationManager.AppSettings["TemperatureMaximum"]);
 
@@ -29,7 +30,5 @@ namespace MS.Exeriences.WheatherForecast
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
-
     }
-
 }

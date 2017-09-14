@@ -1,15 +1,17 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MS.Exeriences.WheatherForecast
 {
     public class MockDataService 
     {
+        private ILog log = log4net.LogManager.GetLogger(typeof(MockDataService));
+
         IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
         {
+            log.Info("Gathering mock wheather info");
+
             return new List<WeatherForecast>(){
                 new WeatherForecast
                 {
