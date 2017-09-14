@@ -1,0 +1,23 @@
+﻿<h2>Module Weather</h2>
+<span ng-if="$ctrl.isLoading">Loading...</span>
+
+
+<table ng-if="!$ctrl.isLoading" class="table">
+    <thead>
+    <!-- En-tête du tableau -->
+    <tr>
+        <th>Date</th>
+        <th>Summary</th>
+        <th>° Celsius</th>
+        <th>° Fahrenheit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="weather in $ctrl.weatherForecasts">
+        <td>{{ weather.DateFormatted }}</td>
+        <td>{{ weather.Summary }}</td>
+        <td>{{ weather.TemperatureC }}</td>
+        <td>{{ weather.TemperatureF }}</td>
+    </tr>
+    </tbody>
+</table>
