@@ -5,7 +5,7 @@ namespace MS.Experiences.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private ILog log = log4net.LogManager.GetLogger(typeof(HomeController));
+        private readonly ILog log = log4net.LogManager.GetLogger(typeof(HomeController));
         
         public ActionResult Index()
         {

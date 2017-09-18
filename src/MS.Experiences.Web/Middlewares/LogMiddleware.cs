@@ -6,7 +6,7 @@ namespace MS.Experiences.Web.Middlewares
 {
     public class LogMiddleware : OwinMiddleware
     {
-        private ILog log = log4net.LogManager.GetLogger(typeof(LogMiddleware));
+        private readonly ILog log = log4net.LogManager.GetLogger(typeof(LogMiddleware));
 
         public LogMiddleware(OwinMiddleware next)
             : base(next)

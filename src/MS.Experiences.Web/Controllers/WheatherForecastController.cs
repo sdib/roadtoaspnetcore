@@ -7,7 +7,13 @@ namespace MS.Experiences.Web.Controllers
 {
     public class WeatherForecastController : ApiController
     {
-        private ILog log = log4net.LogManager.GetLogger(typeof(WeatherForecastController));
+        private readonly ILog log = log4net.LogManager.GetLogger(typeof(WeatherForecastController));
+        private readonly IWheatherForecastService wheatherForecastService;
+
+        public WeatherForecastController(IWheatherForecastService wheatherForecastService)
+        {
+            this.wheatherForecastService = wheatherForecastService;
+        }
 
         [HttpGet]
         [Route("api/weather/{startIndex}")]
@@ -15,10 +21,7 @@ namespace MS.Experiences.Web.Controllers
         {
             log.Info("Requesting wheather info");
 
-            var meteoFranceDataService = new MeteoFranceDataService();
-
-            return meteoFranceDataService.GetWeatherForecasts(startIndex);
+            return this.wheatherForecastService.GetWeatherForecasts(startIndex);
         }
-
     }
 }

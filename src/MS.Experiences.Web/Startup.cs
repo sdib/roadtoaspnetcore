@@ -12,8 +12,11 @@ namespace MS.Experiences.Web
         public void Configuration(IAppBuilder app)
         {
             XmlConfigurator.Configure();
-            // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=316888
+            var webApiConfigBuilder = new WebApiConfigurationBuilder();
+            
             app.UseLog();
+
+            app.UseWebApi(webApiConfigBuilder.Build());
         }
     }
 }

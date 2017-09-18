@@ -6,9 +6,9 @@ using System.Linq;
 
 namespace MS.Exeriences.WheatherForecast
 {
-    public class MeteoFranceDataService
+    public class MeteoFranceDataService : IWheatherForecastService
     {
-        private ILog log = log4net.LogManager.GetLogger(typeof(MeteoFranceDataService));
+        private readonly ILog log = log4net.LogManager.GetLogger(typeof(MeteoFranceDataService));
 
         public IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
         {

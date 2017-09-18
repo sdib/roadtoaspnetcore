@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace MS.Experiences.Web
 {
-    public static class WebApiConfig
+    public class WebApiConfigurationBuilder
     {
-        public static void Register(HttpConfiguration config)
+        public HttpConfiguration Build()
         {
-            // Web API configuration and services
-
-            // Web API routes
+            var config = new HttpConfiguration();
+            UnityWebApiConfig.RegisterComponents(config);
             config.MapHttpAttributeRoutes();
 
             config.Formatters.Remove(config.Formatters.XmlFormatter);
@@ -21,6 +17,8 @@ namespace MS.Experiences.Web
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            return config;
         }
     }
 }

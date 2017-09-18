@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace MS.Exeriences.WheatherForecast
 {
-    public class MockDataService 
+    public class MockDataService : IWheatherForecastService
     {
-        private ILog log = log4net.LogManager.GetLogger(typeof(MockDataService));
+        private readonly ILog log = log4net.LogManager.GetLogger(typeof(MockDataService));
 
-        IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
+        public IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
         {
             log.Info("Gathering mock wheather info");
 
