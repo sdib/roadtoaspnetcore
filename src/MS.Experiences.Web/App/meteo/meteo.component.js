@@ -1,5 +1,4 @@
 ﻿
-
 function MeteoController(meteoFactory) {
     var vm = this;
     vm.data = meteoFactory.data;
