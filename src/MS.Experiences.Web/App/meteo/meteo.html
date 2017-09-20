@@ -1,8 +1,9 @@
-﻿<h2>Module Weather</h2>
-<span ng-if="$ctrl.isLoading">Loading...</span>
+﻿
+<div class="meteo">
+<h2>Module Weather</h2>
+<span ng-if="$ctrl.data.isLoading">Loading...</span>
 
-
-<table ng-if="!$ctrl.isLoading" class="table">
+<table ng-if="!$ctrl.data.isLoading" class="table table-striped">
     <thead>
     <!-- En-tête du tableau -->
     <tr>
@@ -13,7 +14,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="weather in $ctrl.weatherForecasts">
+    <tr ng-repeat="weather in $ctrl.data.weatherForecasts">
         <td>{{ weather.DateFormatted }}</td>
         <td>{{ weather.Summary }}</td>
         <td>{{ weather.TemperatureC }}</td>
@@ -21,3 +22,4 @@
     </tr>
     </tbody>
 </table>
+</div>

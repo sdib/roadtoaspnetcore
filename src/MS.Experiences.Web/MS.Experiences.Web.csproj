@@ -178,16 +178,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.run.js" />
+    <Content Include="App\meteo\index.js" />
+    <Content Include="App\meteo\meteo.factory.js" />
     <Content Include="App\meteo\meteo.component.js" />
     <Content Include="App\meteo\meteo.html" />
+    <Content Include="App\meteo\meteo.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ms-love-linux.png" />
+    <Content Include="Content\road.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="log4net.Development.xml" />
-    <Content Include="log4net.Production.xml" />
+    <Content Include="App\app.css" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -995,7 +998,7 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MS.Exeriences.WheatherForecast\MS.Exeriences.WheatherForecast.csproj">
+    <ProjectReference Include="..\MS.Experiences.WheatherForecast\MS.Experiences.WheatherForecast.csproj">
       <Project>{13acb4d1-2dfa-4165-b2c6-5084b7d6f59e}</Project>
       <Name>MS.Exeriences.WheatherForecast</Name>
     </ProjectReference>

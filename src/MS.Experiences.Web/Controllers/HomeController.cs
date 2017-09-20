@@ -16,9 +16,7 @@ namespace MS.Experiences.Web.Controllers
         public ActionResult About()
         {
             log.Info("Requesting About");
-
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.Message = "Microsoft love linux!";
             return View();
         }
 
