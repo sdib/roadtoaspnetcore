@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.Web", "src\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.WheatherForecast", "src\MS.Experiences.WheatherForecast\MS.Experiences.WheatherForecast.csproj", "{13ACB4D1-2DFA-4165-B2C6-5084B7D6F59E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.WheatherForecast.Tests", "MS.Experiences.WheatherForecast.Tests\MS.Experiences.WheatherForecast.Tests.csproj", "{8CA8CF0D-3D49-447F-813D-3B30DE22C405}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.WheatherForecast.Tests", "src\MS.Experiences.WheatherForecast.Tests\MS.Experiences.WheatherForecast.Tests.csproj", "{8CA8CF0D-3D49-447F-813D-3B30DE22C405}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
