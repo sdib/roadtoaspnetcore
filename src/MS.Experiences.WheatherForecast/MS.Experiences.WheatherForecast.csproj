@@ -7,8 +7,8 @@
     <ProjectGuid>{13ACB4D1-2DFA-4165-B2C6-5084B7D6F59E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MS.Exeriences.WheatherForecast</RootNamespace>
-    <AssemblyName>MS.Exeriences.WheatherForecast</AssemblyName>
+    <RootNamespace>MS.Experiences.WheatherForecast</RootNamespace>
+    <AssemblyName>MS.Experiences.WheatherForecast</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

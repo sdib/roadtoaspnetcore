@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MS.Exeriences.WheatherForecast;
 
 namespace MS.Experiences.WheatherForecast.Tests
 {

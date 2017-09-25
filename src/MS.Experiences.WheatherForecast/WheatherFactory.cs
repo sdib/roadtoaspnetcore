@@ -1,7 +1,7 @@
-﻿using Microsoft.Practices.Unity;
-using System;
+﻿using System;
+using Microsoft.Practices.Unity;
 
-namespace MS.Exeriences.WheatherForecast
+namespace MS.Experiences.WheatherForecast
 {
     public class WheatherFactory : IWheatherFactory
     {

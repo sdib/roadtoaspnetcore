@@ -1,6 +1,6 @@
 using System.Web.Http;
 using Microsoft.Practices.Unity;
-using MS.Exeriences.WheatherForecast;
+using MS.Experiences.WheatherForecast;
 
 namespace MS.Experiences.Web
 {

@@ -1,8 +1,8 @@
-﻿using log4net;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using log4net;
 
-namespace MS.Exeriences.WheatherForecast
+namespace MS.Experiences.WheatherForecast
 {
     public class MeteoMockDataService : IWheatherForecastService
     {

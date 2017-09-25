@@ -1,10 +1,6 @@
-﻿using log4net;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
+﻿using System.Collections.Generic;
 
-namespace MS.Exeriences.WheatherForecast
+namespace MS.Experiences.WheatherForecast
 {
     public class MeteoBelgiqueDataService : IWheatherForecastService
     {

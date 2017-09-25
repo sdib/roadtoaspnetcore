@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MS.Exeriences.WheatherForecast
+namespace MS.Experiences.WheatherForecast
 {
     public interface IWheatherForecastService
     {

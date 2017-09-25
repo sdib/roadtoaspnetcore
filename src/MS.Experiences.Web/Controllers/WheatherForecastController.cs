@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
-using MS.Exeriences.WheatherForecast;
 using log4net;
+using MS.Experiences.WheatherForecast;
 
 namespace MS.Experiences.Web.Controllers
 {

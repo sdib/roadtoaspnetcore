@@ -1,6 +1,6 @@
 ﻿using Microsoft.Practices.Unity;
 
-namespace MS.Exeriences.WheatherForecast
+namespace MS.Experiences.WheatherForecast
 {
     public static class WheatherForecastServices
     {
