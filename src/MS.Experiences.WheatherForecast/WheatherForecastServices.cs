@@ -7,6 +7,7 @@ namespace MS.Exeriences.WheatherForecast
         public static void Register(IUnityContainer unityContainer)
         {
             unityContainer.RegisterType<IWheatherForecastService, MeteoFranceDataService>();
+            unityContainer.RegisterType<IWheatherFactory, WheatherFactory>();
         }
     }
 }

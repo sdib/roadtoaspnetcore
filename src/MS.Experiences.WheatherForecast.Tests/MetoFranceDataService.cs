@@ -17,7 +17,6 @@ namespace MS.Experiences.WheatherForecast.Tests
             var count = wheatherForecasts.Count();
 
             Assert.AreEqual(count, 5);
-
         }
     }
 }

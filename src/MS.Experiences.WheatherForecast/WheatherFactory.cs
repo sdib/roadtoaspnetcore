@@ -3,9 +3,8 @@ using System;
 
 namespace MS.Exeriences.WheatherForecast
 {
-    public class WheatherFactory 
+    public class WheatherFactory : IWheatherFactory
     {
-
         private readonly IUnityContainer _container;
 
         public WheatherFactory(IUnityContainer container)
