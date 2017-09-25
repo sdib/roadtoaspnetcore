@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace MS.Experiences.WheatherForecast
+namespace MS.Experiences.Weather
 {
-    public interface IWheatherForecastService
+    public interface IWeatherForecastService
     {
         IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex);
     }

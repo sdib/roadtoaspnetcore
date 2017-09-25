@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MS.Experiences.Weather;
 
-namespace MS.Experiences.WheatherForecast.Tests
+namespace MS.Experiences.WeatherTests
 {
     [TestClass]
     public class UnitTest

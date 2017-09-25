@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.Web", "src\MS.Experiences.Web\MS.Experiences.Web.csproj", "{12482DCA-3280-4CC1-B386-FCBF97A7C88B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.WheatherForecast", "src\MS.Experiences.WheatherForecast\MS.Experiences.WheatherForecast.csproj", "{13ACB4D1-2DFA-4165-B2C6-5084B7D6F59E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.Weather", "src\MS.Experiences.Weather\MS.Experiences.Weather.csproj", "{13ACB4D1-2DFA-4165-B2C6-5084B7D6F59E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.WheatherForecast.Tests", "src\MS.Experiences.WheatherForecast.Tests\MS.Experiences.WheatherForecast.Tests.csproj", "{8CA8CF0D-3D49-447F-813D-3B30DE22C405}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.Weather.Tests", "src\MS.Experiences.Weather.Tests\MS.Experiences.Weather.Tests.csproj", "{8CA8CF0D-3D49-447F-813D-3B30DE22C405}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {772FA3BA-8E01-40B7-9BF9-3DCF60737858}
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,6 @@
 using System.Web.Http;
 using Microsoft.Practices.Unity;
-using MS.Experiences.WheatherForecast;
+using MS.Experiences.Weather;
 
 namespace MS.Experiences.Web
 {
@@ -9,7 +9,7 @@ namespace MS.Experiences.Web
         public static void RegisterComponents(HttpConfiguration configuration)
         {
             var container = new UnityContainer();
-            WheatherForecastServices.Register(container);
+            WeatherForecastServices.Register(container);
 
             configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
         }

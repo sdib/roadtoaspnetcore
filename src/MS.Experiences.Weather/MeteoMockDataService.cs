@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using log4net;
 
-namespace MS.Experiences.WheatherForecast
+namespace MS.Experiences.Weather
 {
-    public class MeteoMockDataService : IWheatherForecastService
+    public class MeteoMockDataService : IWeatherForecastService
     {
         private readonly ILog log = log4net.LogManager.GetLogger(typeof(MeteoMockDataService));
 

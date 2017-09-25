@@ -1,27 +1,27 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
 using log4net;
-using MS.Experiences.WheatherForecast;
+using MS.Experiences.Weather;
 
 namespace MS.Experiences.Web.Controllers
 {
     public class WeatherForecastController : ApiController
     {
         private readonly ILog log = log4net.LogManager.GetLogger(typeof(WeatherForecastController));
-        private readonly IWheatherForecastService wheatherForecastService;
-        private readonly IWheatherFactory wheatherFactory;
+        private readonly IWeatherForecastService wheatherForecastService;
+        private readonly IWeatherFactory _weatherFactory;
 
-        public WeatherForecastController(IWheatherForecastService wheatherForecastService, IWheatherFactory wheatherFactory)
+        public WeatherForecastController(IWeatherForecastService wheatherForecastService, IWeatherFactory weatherFactory)
         {
             this.wheatherForecastService = wheatherForecastService;
-            this.wheatherFactory = wheatherFactory;
+            this._weatherFactory = weatherFactory;
         }
 
         [HttpGet]
         [Route("api/weather/{startIndex}")]
         public IEnumerable<WeatherForecast> Get(int startIndex)
         {
-            log.Info("Requesting wheather info");
+            log.Info("Requesting weather info");
             return this.wheatherForecastService.GetWeatherForecasts(startIndex);
         }
 
@@ -29,8 +29,8 @@ namespace MS.Experiences.Web.Controllers
         [Route("api/weather/{startIndex}/{country}")]
         public IEnumerable<WeatherForecast> GetByCountry(int startIndex, string country)
         {
-            log.Info($"Requesting wheather info from country {country}");
-            return this.wheatherFactory.GetDataService(country).GetWeatherForecasts(startIndex);
+            log.Info($"Requesting weather info from country {country}");
+            return this._weatherFactory.GetDataService(country).GetWeatherForecasts(startIndex);
         }
     }
 }

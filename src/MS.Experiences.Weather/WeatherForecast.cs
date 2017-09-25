@@ -1,4 +1,4 @@
-﻿namespace MS.Experiences.WheatherForecast
+﻿namespace MS.Experiences.Weather
 {
     public class WeatherForecast
     {
