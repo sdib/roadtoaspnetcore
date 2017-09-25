@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace MS.Exeriences.WheatherForecast
 {
-    public class MockDataService : IWheatherForecastService
+    public class MeteoMockDataService : IWheatherForecastService
     {
-        private readonly ILog log = log4net.LogManager.GetLogger(typeof(MockDataService));
+        private readonly ILog log = log4net.LogManager.GetLogger(typeof(MeteoMockDataService));
 
         public IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
         {

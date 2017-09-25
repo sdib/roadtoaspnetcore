@@ -57,8 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IWheatherForecastService.cs" />
+    <Compile Include="MeteoBelgiqueDataService.cs" />
+    <Compile Include="WheatherFactory.cs" />
     <Compile Include="MetoFranceDataService.cs" />
-    <Compile Include="MockDataService.cs" />
+    <Compile Include="MeteoMockDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WheatherForecastServices.cs" />
     <Compile Include="WheatherForecast.cs" />
