@@ -1,8 +1,8 @@
 ﻿
-function WheatherController(meteoFactory) {
+function WheatherController(wheatherFactory) {
     var vm = this;
-    vm.data = meteoFactory.data;
-    meteoFactory.loadMeteoAsync();
+    vm.data = wheatherFactory.data;
+    wheatherFactory.loadWheatherAsync();
     return vm;
 }
 

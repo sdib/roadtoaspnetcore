@@ -1,26 +1,27 @@
 ﻿
-function MeteoFactory($http) {
+function WheatherFactory($http) {
 
-    var loadMeteoAsync=function(){
-        meteo.data.isLoading = true;
+    var loadWheatherAsync = function () {
+        var _data = wheather.data;
+        _data.isLoading = true;
         return $http.get('api/weather/5').then(function (response) {
             var elements = response.data;
             for (var i = 0; i < elements.length; i++) {
-                meteo.data.weatherForecasts.push(elements[i]);
+                _data.weatherForecasts.push(elements[i]);
             }
-            meteo.data.isLoading = false;
+            _data.isLoading = false;
         });
     }
 
-    var meteo = {
+    var wheather = {
         data: {
-            weatherForecasts:[],
-            isLoading:false
+            weatherForecasts: [],
+            isLoading: false
         },
-        loadMeteoAsync:loadMeteoAsync
+        loadWheatherAsync: loadWheatherAsync
     };
 
-    return meteo;
+    return wheather;
 }
 var meteo = angular.module('ms.experience.wheather');
-meteo.factory('WheatherFactory', ['$http', MeteoFactory]);
+meteo.factory('WheatherFactory', ['$http', WheatherFactory]);
