@@ -3,11 +3,11 @@ using Microsoft.Practices.Unity;
 
 namespace MS.Experiences.Weather
 {
-    public class WeatherFactory : IWeatherFactory
+    public class WeatherDataServiceFactory : IWeatherDataServiceFactory
     {
         private readonly IUnityContainer _container;
 
-        public WeatherFactory(IUnityContainer container)
+        public WeatherDataServiceFactory(IUnityContainer container)
         {
             _container = container;
         }

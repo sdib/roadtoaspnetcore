@@ -59,7 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IWeatherFactory.cs" />
+    <Compile Include="IWeatherDataServiceFactory.cs" />
     <Compile Include="IWeatherForecastService.cs" />
     <Compile Include="MeteoBelgiqueDataService.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -67,7 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="WeatherFactory.cs" />
+    <Compile Include="WeatherDataServiceFactory.cs" />
     <Compile Include="MetoFranceDataService.cs" />
     <Compile Include="MeteoMockDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

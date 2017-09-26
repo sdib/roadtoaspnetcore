@@ -9,12 +9,12 @@ namespace MS.Experiences.Web.Controllers
     {
         private readonly ILog log = log4net.LogManager.GetLogger(typeof(WeatherForecastController));
         private readonly IWeatherForecastService wheatherForecastService;
-        private readonly IWeatherFactory _weatherFactory;
+        private readonly IWeatherDataServiceFactory _weatherDataServiceFactory;
 
-        public WeatherForecastController(IWeatherForecastService wheatherForecastService, IWeatherFactory weatherFactory)
+        public WeatherForecastController(IWeatherForecastService wheatherForecastService, IWeatherDataServiceFactory weatherDataServiceFactory)
         {
             this.wheatherForecastService = wheatherForecastService;
-            this._weatherFactory = weatherFactory;
+            this._weatherDataServiceFactory = weatherDataServiceFactory;
         }
 
         [HttpGet]
@@ -29,8 +29,9 @@ namespace MS.Experiences.Web.Controllers
         [Route("api/weather/{startIndex}/{country}")]
         public IEnumerable<WeatherForecast> GetByCountry(int startIndex, string country)
         {
-            log.Info($"Requesting weather info from country {country}");
-            return this._weatherFactory.GetDataService(country).GetWeatherForecasts(startIndex);
+            log.Info($"Requesting weather info for {country}");
+            IWeatherForecastService weatherForecastService = this._weatherDataServiceFactory.GetDataService(country);
+            return weatherForecastService.GetWeatherForecasts(startIndex);
         }
     }
 }
