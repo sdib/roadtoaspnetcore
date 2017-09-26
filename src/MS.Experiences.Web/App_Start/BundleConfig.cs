@@ -20,7 +20,7 @@ namespace MS.Experiences.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/App/app.css",
-                      "~/App/wheather/wheathers.css"
+                      "~/App/wheather/wheather.css"
                       ));
         }
     }
