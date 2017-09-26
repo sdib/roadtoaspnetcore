@@ -1,5 +1,5 @@
 ﻿
-function MeteoController(meteoFactory) {
+function WheatherController(meteoFactory) {
     var vm = this;
     vm.data = meteoFactory.data;
     meteoFactory.loadMeteoAsync();
@@ -7,8 +7,8 @@ function MeteoController(meteoFactory) {
 }
 
 var meteo = angular.module('ms.experience.wheather');
-meteo.component('meteo',
+meteo.component('wheather',
     {
-        controller: ['WheatherFactory', MeteoController],
+        controller: ['WheatherFactory', WheatherController],
         templateUrl: 'App/wheather/wheather.html'
     });

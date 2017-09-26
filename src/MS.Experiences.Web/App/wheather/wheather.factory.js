@@ -1,5 +1,6 @@
 ﻿
 function MeteoFactory($http) {
+
     var loadMeteoAsync=function(){
         meteo.data.isLoading = true;
         return $http.get('api/weather/5').then(function (response) {

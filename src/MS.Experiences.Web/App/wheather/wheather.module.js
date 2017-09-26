@@ -1,2 +1,2 @@
 ﻿
-var meteo = angular.module('ms.experience.wheather', []);
+angular.module('ms.experience.wheather', []);
