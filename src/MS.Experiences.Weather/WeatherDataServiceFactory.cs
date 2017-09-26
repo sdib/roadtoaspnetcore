@@ -12,7 +12,7 @@ namespace MS.Experiences.Weather
             _container = container;
         }
 
-        public IWeatherForecastService GetDataService(string country)
+        public IWeatherForecastService Get(string country)
         {
             switch (country)
             {
@@ -21,7 +21,7 @@ namespace MS.Experiences.Weather
                 case "france":
                     return _container.Resolve<MeteoFranceDataService>();
                 default:
-                    throw new ArgumentException("This country is not available");
+                    throw new NotSupportedException("This country is not supported");
             }
 
         }

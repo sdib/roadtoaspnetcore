@@ -30,7 +30,7 @@ namespace MS.Experiences.Web.Controllers
         public IEnumerable<WeatherForecast> GetByCountry(int startIndex, string country)
         {
             log.Info($"Requesting weather info for {country}");
-            IWeatherForecastService weatherForecastService = this._weatherDataServiceFactory.GetDataService(country);
+            IWeatherForecastService weatherForecastService = this._weatherDataServiceFactory.Get(country);
             return weatherForecastService.GetWeatherForecasts(startIndex);
         }
     }

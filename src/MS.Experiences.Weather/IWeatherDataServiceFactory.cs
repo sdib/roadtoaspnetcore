@@ -2,6 +2,6 @@
 {
     public interface IWeatherDataServiceFactory
     {
-        IWeatherForecastService GetDataService(string country);
+        IWeatherForecastService Get(string country);
     }
 }
