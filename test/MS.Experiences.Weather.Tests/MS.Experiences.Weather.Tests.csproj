@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -50,11 +53,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="MetoFranceDataService.cs" />
+    <Compile Include="MeteoBelgiqueDataService_GetWeatherForecastShould.cs" />
+    <Compile Include="MeteoFranceDataService_GetWeatherForecastsShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MS.Experiences.Weather\MS.Experiences.Weather.csproj">
+    <ProjectReference Include="..\..\src\MS.Experiences.Weather\MS.Experiences.Weather.csproj">
       <Project>{13ACB4D1-2DFA-4165-B2C6-5084B7D6F59E}</Project>
       <Name>MS.Experiences.Weather</Name>
     </ProjectReference>
@@ -71,6 +75,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>App.config</DependentUpon>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

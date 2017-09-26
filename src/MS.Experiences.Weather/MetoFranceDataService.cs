@@ -20,7 +20,7 @@ namespace MS.Experiences.Weather
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
-                DateFormatted = DateTime.Now.AddDays(index + startDateIndex).ToString("d"),
+                DateFormatted = DateTime.Now.AddDays(index + startDateIndex).ToShortDateString(),
                 TemperatureC = rng.Next(temperatureMinimum, temperatureMaximum),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             });
