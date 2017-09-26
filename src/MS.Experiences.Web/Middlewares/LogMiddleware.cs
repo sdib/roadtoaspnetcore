@@ -13,6 +13,12 @@ namespace MS.Experiences.Web.Middlewares
         {
         }
 
+        public LogMiddleware(OwinMiddleware next, ILog log)
+            : this(next)
+        {
+            this.log = log;
+        }
+
         public async override Task Invoke(IOwinContext context)
         {
             log.Debug($"Received request on {context.Request.Path}");
