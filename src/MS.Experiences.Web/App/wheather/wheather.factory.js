@@ -21,5 +21,5 @@ function MeteoFactory($http) {
 
     return meteo;
 }
-var meteo = angular.module('ms.experience.meteo');
-meteo.factory('MeteoFactory', ['$http', MeteoFactory]);
+var meteo = angular.module('ms.experience.wheather');
+meteo.factory('WheatherFactory', ['$http', MeteoFactory]);

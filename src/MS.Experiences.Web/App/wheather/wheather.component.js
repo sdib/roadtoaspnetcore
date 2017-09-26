@@ -6,9 +6,9 @@ function MeteoController(meteoFactory) {
     return vm;
 }
 
-var meteo = angular.module('ms.experience.meteo');
+var meteo = angular.module('ms.experience.wheather');
 meteo.component('meteo',
     {
-        controller: ['MeteoFactory', MeteoController],
-        templateUrl: 'App/meteo/meteo.html'
+        controller: ['WheatherFactory', MeteoController],
+        templateUrl: 'App/wheather/wheather.html'
     });
