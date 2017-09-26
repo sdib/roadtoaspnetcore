@@ -1,0 +1,26 @@
+[{
+	"DateFormatted": "01/10/2017",
+	"TemperatureC": -25,
+	"Summary": "Warm",
+	"TemperatureF": -12
+}, {
+	"DateFormatted": "02/10/2017",
+	"TemperatureC": 24,
+	"Summary": "Cool",
+	"TemperatureF": 75
+}, {
+	"DateFormatted": "03/10/2017",
+	"TemperatureC": 40,
+	"Summary": "Balmy",
+	"TemperatureF": 103
+}, {
+	"DateFormatted": "04/10/2017",
+	"TemperatureC": -16,
+	"Summary": "Bracing",
+	"TemperatureF": 4
+}, {
+	"DateFormatted": "05/10/2017",
+	"TemperatureC": 50,
+	"Summary": "Cool",
+	"TemperatureF": 121
+}]

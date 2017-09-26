@@ -1,10 +1,10 @@
-﻿using log4net;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using log4net;
 
-namespace MS.Exeriences.WheatherForecast
+namespace MS.Experiences.Weather
 {
-    public class MeteoMockDataService : IWheatherForecastService
+    public class MeteoMockDataService : IWeatherForecastService
     {
         private readonly ILog log = log4net.LogManager.GetLogger(typeof(MeteoMockDataService));
 

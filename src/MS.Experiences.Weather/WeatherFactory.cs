@@ -1,18 +1,18 @@
-﻿using Microsoft.Practices.Unity;
-using System;
+﻿using System;
+using Microsoft.Practices.Unity;
 
-namespace MS.Exeriences.WheatherForecast
+namespace MS.Experiences.Weather
 {
-    public class WheatherFactory : IWheatherFactory
+    public class WeatherFactory : IWeatherFactory
     {
         private readonly IUnityContainer _container;
 
-        public WheatherFactory(IUnityContainer container)
+        public WeatherFactory(IUnityContainer container)
         {
             _container = container;
         }
 
-        public IWheatherForecastService GetDataService(string country)
+        public IWeatherForecastService GetDataService(string country)
         {
             switch (country)
             {
