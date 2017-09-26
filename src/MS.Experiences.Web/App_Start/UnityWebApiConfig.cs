@@ -10,7 +10,6 @@ namespace MS.Experiences.Web
         {
             var container = new UnityContainer();
             WeatherForecastServices.Register(container);
-
             configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
         }
     }
