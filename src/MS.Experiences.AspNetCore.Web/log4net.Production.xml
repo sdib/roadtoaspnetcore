@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+  <appender name="ExceptionRollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <staticlogfilename value="false" />
+    <file type="log4net.Util.PatternString" value="./Log/exceptions.log" />
+    <appendToFile value="true" />
+    <rollingStyle value="Date" />
+    <datePattern value=".yyyy-MM-dd.\tx\t" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date{dd/MM/yyyy HH:mm:ss} [Application:'%property{ApplicationName}' / Host:'%property{log4net:HostName}' / User:'%property{UserName}' / CorrelationId:'%property{CorrelationId}'] %message%newline%exception%newline" />
+    </layout>
+    <filter type="log4net.Filter.LevelRangeFilter">
+      <acceptOnMatch value="true" />
+      <levelMin value="ERROR" />
+      <levelMax value="ERROR" />
+    </filter>
+  </appender>
+  <root>
+    <level value="ERROR" />
+    <appender-ref ref="ExceptionRollingLogFileAppender" />
+  </root>
+</log4net>
