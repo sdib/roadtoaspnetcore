@@ -1,4 +1,6 @@
 ﻿
+
+
 function WheatherController(wheatherFactory) {
     var vm = this;
     vm.data = wheatherFactory.data;
@@ -6,9 +8,11 @@ function WheatherController(wheatherFactory) {
     return vm;
 }
 
-var wheather = angular.module('ms.experience.wheather');
+import wheather from './wheather.module';
+import './wheather.css';
+import wheatherFactory from './wheather.factory';
 wheather.component('wheather',
     {
-        controller: ['WheatherFactory', WheatherController],
-        templateUrl: 'App/wheather/wheather.html'
+        controller: [wheatherFactory, WheatherController],
+        template: require('./wheather.html')
     });

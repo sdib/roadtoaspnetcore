@@ -5,8 +5,8 @@
   "scripts": {
     "lint": "eslint --fix ./App/**/*.js",
     "lint:watch": "watch \"npm run lint\" ./App",
-    "webpack:prod": "rimraf dist && webpack --bail --progress --profile --env.prod",
-    "webpack:dev": "webpack --watch --env.dev"
+    "webpack:prod": "rimraf dist && cross-env NODE_ENV=production webpack --bail --progress --profile",
+    "webpack:dev": "cross-env NODE_ENV=development webpack --watch"
   },
   "author": "AXA",
   "license": "MIT",
@@ -39,6 +39,7 @@
     "watch": "latest",
     "webpack": "3.5.5",
     "webpack-dev-server": "2.7.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "cross-env": "^5.0.5"
   }
 }
