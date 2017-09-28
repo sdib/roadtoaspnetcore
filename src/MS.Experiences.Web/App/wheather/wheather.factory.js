@@ -23,5 +23,5 @@ function WheatherFactory($http) {
 
     return wheather;
 }
-var meteo = angular.module('ms.experience.wheather');
-meteo.factory('WheatherFactory', ['$http', WheatherFactory]);
+var wheather = angular.module('ms.experience.wheather');
+wheather.factory('WheatherFactory', ['$http', WheatherFactory]);
