@@ -109,6 +109,7 @@
     <Compile Include="Configuration\LegacyConfigurationProvider.cs" />
     <Compile Include="IoC\AspNetCoreDependencyResolver.cs" />
     <Compile Include="IoC\IDependencyResolver.cs" />
+    <Compile Include="Logs\LoggerFactoryHolder.cs" />
     <Compile Include="Logs\HostingEnvironmentExtensions.cs" />
     <Compile Include="Logs\Log4NetLogger.cs" />
     <Compile Include="Logs\Log4NetLoggerProvider.cs" />
