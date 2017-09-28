@@ -1,8 +1,8 @@
 ﻿
-function WheatherFactory($http) {
+function WeatherFactory($http) {
 
-    var loadWheatherAsync = function () {
-        var _data = wheather.data;
+    var loadWeatherAsync = function () {
+        var _data = weather.data;
         _data.isLoading = true;
         return $http.get('api/weather/5').then(function (response) {
             var elements = response.data;
@@ -13,15 +13,15 @@ function WheatherFactory($http) {
         });
     }
 
-    var wheather = {
+    var weather = {
         data: {
             weatherForecasts: [],
             isLoading: false
         },
-        loadWheatherAsync: loadWheatherAsync
+        loadWeatherAsync: loadWeatherAsync
     };
 
-    return wheather;
+    return weather;
 }
-var wheather = angular.module('ms.experience.wheather');
-wheather.factory('WheatherFactory', ['$http', WheatherFactory]);
+var weather = angular.module('ms.experience.weather');
+weather.factory('WeatherFactory', ['$http', WeatherFactory]);
