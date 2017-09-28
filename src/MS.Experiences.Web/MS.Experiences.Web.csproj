@@ -1003,6 +1003,10 @@
     <Content Include="Scripts\version.json" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MS.Experiences.Migration\MS.Experiences.Migration.csproj">
+      <Project>{2dc1b907-a413-4c8c-a17a-864d576f1e2a}</Project>
+      <Name>MS.Experiences.Migration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MS.Experiences.Weather\MS.Experiences.Weather.csproj">
       <Project>{13acb4d1-2dfa-4165-b2c6-5084b7d6f59e}</Project>
       <Name>MS.Experiences.Weather</Name>

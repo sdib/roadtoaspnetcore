@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using log4net;
 
 namespace MS.Experiences.Weather
 {
     public class MeteoMockDataService : IWeatherForecastService
     {
-        private readonly ILog log = log4net.LogManager.GetLogger(typeof(MeteoMockDataService));
-
         public IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
         {
-            log.Info("Gathering mock wheather info");
-
             return new List<WeatherForecast>(){
                 new WeatherForecast
                 {

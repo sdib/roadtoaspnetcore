@@ -11,6 +11,7 @@ namespace MS.Experiences.Web
         {
 			var container = new UnityContainer();
             WeatherForecastServices.Register(container);
+            container.RegisterInstance(LoggerFactoryHolder.Instance);
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

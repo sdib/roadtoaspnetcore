@@ -1,4 +1,7 @@
-﻿using Microsoft.Practices.Unity;
+﻿using System;
+using Microsoft.Practices.Unity;
+using MS.Experiences.Migration;
+using MS.Experiences.Migration.Configuration;
 
 namespace MS.Experiences.Weather
 {
@@ -8,6 +11,8 @@ namespace MS.Experiences.Weather
         {
             unityContainer.RegisterType<IWeatherForecastService, MeteoFranceDataService>();
             unityContainer.RegisterType<IWeatherDataServiceFactory, WeatherDataServiceFactory>();
+            unityContainer.RegisterType<IConfigurationProvider, LegacyConfigurationProvider>();
+            unityContainer.RegisterType<IDependencyResolver, UnityDependencyResolver>();
         }
     }
 }

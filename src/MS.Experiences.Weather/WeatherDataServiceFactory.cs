@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.Practices.Unity;
+using MS.Experiences.Migration;
 
 namespace MS.Experiences.Weather
 {
     public class WeatherDataServiceFactory : IWeatherDataServiceFactory
     {
-        private readonly IUnityContainer _container;
+        private readonly IDependencyResolver _resolver;
 
-        public WeatherDataServiceFactory(IUnityContainer container)
+        public WeatherDataServiceFactory(IDependencyResolver resolver)
         {
-            _container = container;
+            _resolver = resolver;
         }
 
         public IWeatherForecastService Get(string country)
@@ -17,9 +17,9 @@ namespace MS.Experiences.Weather
             switch (country)
             {
                 case "belgique":
-                    return _container.Resolve<MeteoBelgiqueDataService>();
+                    return _resolver.Resolve<MeteoBelgiqueDataService>();
                 case "france":
-                    return _container.Resolve<MeteoFranceDataService>();
+                    return _resolver.Resolve<MeteoFranceDataService>();
                 default:
                     throw new NotSupportedException("This country is not supported");
             }

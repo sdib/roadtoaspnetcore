@@ -77,6 +77,7 @@
     <Compile Include="IWeatherDataServiceFactory.cs" />
     <Compile Include="IWeatherForecastService.cs" />
     <Compile Include="MeteoBelgiqueDataService.cs" />
+    <Compile Include="NetCoreWeatherForecastServices.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,6 +91,7 @@
     <Compile Include="WeatherForecast.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Resources\meteo.belgium.json" />
   </ItemGroup>
@@ -98,6 +100,12 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MS.Experiences.Migration\MS.Experiences.Migration.csproj">
+      <Project>{2DC1B907-A413-4C8C-A17A-864D576F1E2A}</Project>
+      <Name>MS.Experiences.Migration</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

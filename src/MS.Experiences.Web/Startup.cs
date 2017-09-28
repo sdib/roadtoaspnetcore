@@ -1,4 +1,6 @@
-﻿using log4net.Config;
+﻿using AF.AxaConnect.Infrastructure.Logging;
+using log4net.Config;
+using Microsoft.Extensions.Logging;
 using Microsoft.Owin;
 using MS.Experiences.Web.Middlewares;
 using Owin;
@@ -11,7 +13,6 @@ namespace MS.Experiences.Web
     {
         public void Configuration(IAppBuilder app)
         {
-            XmlConfigurator.Configure();
             var webApiConfigBuilder = new WebApiConfigurationBuilder();
             
             app.UseLog();
