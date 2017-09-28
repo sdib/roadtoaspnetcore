@@ -1,44 +1,21 @@
-"use strict";
-
-// Modules
-var webpack = require("webpack");
-var merge = require("webpack-merge");
-//var autoprefixer = require("autoprefixer");
-//var ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-/**
- * Environment
- */
-var env = { name: "test" };
-env.isDev = process.argv.indexOf("--env.dev") > 0;
-env.isProd = process.argv.indexOf("--env.prod") > 0;
-env.isTest = !env.isDev && !env.isProd;
-if (env.isProd) {
-  env.name = "prod";
-} else if (env.isDev) {
-  env.name = "dev";
-}
+const webpack = require("webpack");
+const merge = require("webpack-merge");
+const path = require("path");  
 
 console.log(
-  `WebPack environment test:${env.isTest} prod:${env.isProd} dev:${env.isDev} `
+  `WebPack environment : ${process.env.NODE_ENV}`
 );
 
 module.exports = (function makeWebpackConfig() {
   var config = {};
-
-  config.node = {
-    fs: "empty"
-  };
-
-  config.target = "node";
 
   config.entry = {
     app: "./App/app.run.js"
   };
 
   config.output = {
-    path: __dirname + "/wwwroot/dist",
-    filename: "app.bundle.js"
+      path: path.join(__dirname, "wwwroot/dist"),
+      filename: "app.bundle.js"
   };
 
   config.module = {
@@ -69,7 +46,7 @@ module.exports = (function makeWebpackConfig() {
   };
 
   // Configuration by environment
-  var webpackEnvConfig = require("./webpack.config." + env.name + ".js");
+  var webpackEnvConfig = require("./webpack.config." + process.env.NODE_ENV + ".js");
   var finalConfig = merge(config, webpackEnvConfig);
 
   return finalConfig;
