@@ -1,10 +1,20 @@
-﻿namespace MS.Experiences.Migration
+﻿using System;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace MS.Experiences.Migration
 {
     public class AspNetCoreDependencyResolver : IDependencyResolver
     {
+        private readonly IServiceProvider _serviceProvider;
+
+        public AspNetCoreDependencyResolver(IServiceProvider serviceProvider)
+        {
+            _serviceProvider = serviceProvider;
+        }
+
         public T Resolve<T>()
         {
-            throw new System.NotImplementedException();
+            return _serviceProvider.GetService<T>();
         }
     }
 }

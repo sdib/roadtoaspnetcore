@@ -2,6 +2,12 @@
 {
     public interface IConfigurationProvider
     {
-        object GetWeatherConfig();
+        WeatherConfig GetWeatherConfig();
+    }
+
+    public class WeatherConfig
+    {
+        public int TemperatureMax { get; set; }
+        public int TemperatureMin { get; set; }
     }
 }

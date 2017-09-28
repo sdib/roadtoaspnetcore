@@ -1,10 +1,19 @@
-﻿namespace MS.Experiences.Migration.Configuration
+﻿using Microsoft.Extensions.Options;
+
+namespace MS.Experiences.Migration.Configuration
 {
     public class AspNetCoreConfigurationProvider : IConfigurationProvider
     {
-        public object GetWeatherConfig()
+        private readonly IOptions<WeatherConfig> _weatherConfig;
+
+        public AspNetCoreConfigurationProvider(IOptions<WeatherConfig> weatherConfig)
         {
-            throw new System.NotImplementedException();
+            _weatherConfig = weatherConfig;
+        }
+
+        public WeatherConfig GetWeatherConfig()
+        {
+            return _weatherConfig.Value;
         }
     }
 }

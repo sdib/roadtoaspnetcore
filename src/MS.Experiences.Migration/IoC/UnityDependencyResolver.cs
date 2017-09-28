@@ -1,10 +1,19 @@
-﻿namespace MS.Experiences.Migration
+﻿using Microsoft.Practices.Unity;
+
+namespace MS.Experiences.Migration
 {
     public class UnityDependencyResolver : IDependencyResolver
     {
+        private readonly IUnityContainer _container;
+
+        public UnityDependencyResolver(IUnityContainer container)
+        {
+            _container = container;
+        }
+
         public T Resolve<T>()
         {
-            throw new System.NotImplementedException();
+            return _container.Resolve<T>();
         }
     }
 }
