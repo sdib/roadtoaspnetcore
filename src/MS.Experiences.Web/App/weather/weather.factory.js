@@ -24,4 +24,5 @@ function WeatherFactory($http) {
     return weather;
 }
 var weather = angular.module('ms.experience.weather');
+//import weather from './weather.module';
 weather.factory('WeatherFactory', ['$http', WeatherFactory]);

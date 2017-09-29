@@ -7,6 +7,10 @@ function WeatherController(weatherFactory) {
 }
 
 var weather = angular.module('ms.experience.weather');
+//import weather from './weather.module';
+//import WeatherFactory from './weather.factory';
+//import './weather.css';
+
 weather.component('weather',
     {
         controller: ['WeatherFactory', WeatherController],
