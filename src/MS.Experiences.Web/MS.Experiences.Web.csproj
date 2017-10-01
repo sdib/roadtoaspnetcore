@@ -192,11 +192,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.run.js" />
-    <Content Include="App\wheather\wheather.component.js" />
-    <Content Include="App\wheather\wheather.css" />
-    <Content Include="App\wheather\wheather.factory.js" />
-    <Content Include="App\wheather\wheather.html" />
-    <Content Include="App\wheather\wheather.module.js" />
+    <Content Include="App\weather\weather.component.js" />
+    <Content Include="App\weather\weather.css" />
+    <Content Include="App\weather\weather.factory.js" />
+    <Content Include="App\weather\weather.html" />
+    <Content Include="App\weather\weather.module.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\favicon.ico" />

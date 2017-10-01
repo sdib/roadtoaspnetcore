@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.Weather", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.Migration", "src\MS.Experiences.Migration\MS.Experiences.Migration.csproj", "{2DC1B907-A413-4C8C-A17A-864D576F1E2A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.Experiences.AspNetCore.Web", "src\MS.Experiences.AspNetCore.Web\MS.Experiences.AspNetCore.Web.csproj", "{4D229C72-2AF5-48EA-98B9-9A5AB7953BDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.Experiences.WebCore", "src\MS.Experiences.WebCore\MS.Experiences.WebCore.csproj", "{F6D137B8-2110-44A4-BEC8-6EB03118ADB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{2DC1B907-A413-4C8C-A17A-864D576F1E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DC1B907-A413-4C8C-A17A-864D576F1E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DC1B907-A413-4C8C-A17A-864D576F1E2A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4D229C72-2AF5-48EA-98B9-9A5AB7953BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D229C72-2AF5-48EA-98B9-9A5AB7953BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D229C72-2AF5-48EA-98B9-9A5AB7953BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D229C72-2AF5-48EA-98B9-9A5AB7953BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6D137B8-2110-44A4-BEC8-6EB03118ADB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6D137B8-2110-44A4-BEC8-6EB03118ADB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6D137B8-2110-44A4-BEC8-6EB03118ADB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6D137B8-2110-44A4-BEC8-6EB03118ADB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

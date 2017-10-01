@@ -10,15 +10,15 @@ namespace MS.Experiences.Weather
     {
         private readonly IConfigurationProvider _configProvider;
 
-        public MeteoFranceDataService(IConfigurationProvider configProvider)
+        public MeteoFranceDataService()
         {
-            _configProvider = configProvider;
+           // _configProvider = configProvider;
         }
 
         public IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
         {
-            int temperatureMinimum = this._configProvider.GetWeatherConfig().TemperatureMin;
-            int temperatureMaximum = this._configProvider.GetWeatherConfig().TemperatureMax;
+            int temperatureMinimum = 0;//this._configProvider.GetWeatherConfig().TemperatureMin;
+            int temperatureMaximum = 50;//this._configProvider.GetWeatherConfig().TemperatureMax;
 
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
