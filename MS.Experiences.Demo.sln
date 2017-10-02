@@ -1,16 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.Web", "src\MS.Experiences.Web\MS.Experiences.Web.csproj", "{12482DCA-3280-4CC1-B386-FCBF97A7C88B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Experiences.Weather", "src\MS.Experiences.Weather\MS.Experiences.Weather.csproj", "{13ACB4D1-2DFA-4165-B2C6-5084B7D6F59E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0DDCD0A4-30BC-4F0D-A8AF-E883E0922447}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
