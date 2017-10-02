@@ -14,6 +14,11 @@ namespace MS.Experiences.Weather
         {
             _options = options.Value;
         }
+        
+        //public MeteoFranceDataService(IOptions<WeatherOptions> options)
+        //{
+        //    _options = options.Value;
+        //}
 
         public IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
         {
