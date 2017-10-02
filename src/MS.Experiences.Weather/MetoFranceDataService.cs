@@ -10,9 +10,13 @@ namespace MS.Experiences.Weather
     {
         private readonly WeatherOptions _options;
 
-        public MeteoFranceDataService(IOptions<WeatherOptions> options)
+        public MeteoFranceDataService()
         {
-            _options = options.Value;
+            _options = new WeatherOptions
+            {
+                TemperatureMax = int.Parse(ConfigurationManager.AppSettings["TemperatureMaximum"]),
+                TemprateurMin = int.Parse(ConfigurationManager.AppSettings["TemperatureMinimum"])
+            };
         }
         
         //public MeteoFranceDataService(IOptions<WeatherOptions> options)
