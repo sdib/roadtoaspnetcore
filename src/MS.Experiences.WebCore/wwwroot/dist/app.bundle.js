@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "bcc6a16fc31d07930ef7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "1ca41677bf15d37f97c7"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -36909,7 +36909,7 @@ if(true) {
 /* 35 */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"meteo\">\r\n<h2>Module Weather</h2>\r\n<span ng-if=\"$ctrl.data.isLoading\">Loading...</span>\r\n<table ng-if=\"!$ctrl.data.isLoading\" class=\"table table-striped\">\r\n    <thead>\r\n    <tr>\r\n        <th>Date</th>\r\n        <th>Summary</th>\r\n        <th>° Celsius</th>\r\n        <th>° Fahrenheit</th>\r\n    </tr>\r\n    </thead>\r\n    <tbody>\r\n    <tr ng-repeat=\"weather in $ctrl.data.weatherForecasts\">\r\n        <td ng-bind=\"weather.dateFormatted\"></td>\r\n        <td ng-bind=\"weather.summary\"></td>\r\n        <td ng-bind=\"weather.temperatureC\"></td>\r\n        <td ng-bind=\"weather.temperatureF\"></td>\r\n    </tr>\r\n    </tbody>\r\n</table>\r\n</div>"
+module.exports = "\r\n<div class=\"meteo\">\r\n<h2>{{$ctrl.title}}</h2>\r\n<span ng-if=\"$ctrl.data.isLoading\">Loading...</span>\r\n<table ng-if=\"!$ctrl.data.isLoading\" class=\"table table-striped\">\r\n    <thead>\r\n    <tr>\r\n        <th>Date</th>\r\n        <th>Summary</th>\r\n        <th>° Celsius</th>\r\n        <th>° Fahrenheit</th>\r\n    </tr>\r\n    </thead>\r\n    <tbody>\r\n    <tr ng-repeat=\"weather in $ctrl.data.weatherForecasts\">\r\n        <td ng-bind=\"weather.dateFormatted\"></td>\r\n        <td ng-bind=\"weather.summary\"></td>\r\n        <td ng-bind=\"weather.temperatureC\"></td>\r\n        <td ng-bind=\"weather.temperatureF\"></td>\r\n    </tr>\r\n    </tbody>\r\n</table>\r\n</div>"
 
 /***/ }),
 /* 36 */

@@ -1,4 +1,5 @@
-﻿
+﻿import weather from './weather.module';
+
 function WeatherFactory($http) {
 
     const loadWeatherAsync = function () {
@@ -21,8 +22,6 @@ function WeatherFactory($http) {
 
     return weather;
 }
-
-import weather from './weather.module';
 
 const name = 'WeatherFactory';
 weather.factory(name, ['$http', WeatherFactory]);
