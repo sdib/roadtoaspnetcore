@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -17,6 +18,11 @@ namespace MS.Experiences.Weather
                 TemprateurMin = Int32.Parse(ConfigurationManager.AppSettings["TemperatureMinimum"])
             };
         }
+        
+        //public MeteoFranceDataService(IOptions<WeatherOptions> options)
+        //{
+        //    _options = options.Value;
+        //}
 
         public IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
         {
