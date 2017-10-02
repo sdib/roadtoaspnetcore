@@ -12,13 +12,13 @@ https://www.nuget.org/packages/Microsoft.AspNetCore.All/2.0.0
 
 	<DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
 
-2 - 
+3 ----------------------------
 
-3 - 
-
+services.AddTransient<IWeatherForecastService, MeteoFranceDataService>();
+	
 4 ----------------------------
 
-<script sc="~/dist/app.bundle.js" asp-append-version="true" ></script>
+<script src="~/dist/app.bundle.js" asp-append-version="true" ></script>
 
 5 ----------------------------
 

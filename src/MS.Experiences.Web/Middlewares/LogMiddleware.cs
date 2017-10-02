@@ -8,8 +8,7 @@ namespace MS.Experiences.Web.Middlewares
     {
         private readonly ILog log = log4net.LogManager.GetLogger(typeof(LogMiddleware));
 
-        public LogMiddleware(OwinMiddleware next)
-            : base(next)
+        public LogMiddleware(OwinMiddleware next) : base(next)
         {
         }
         

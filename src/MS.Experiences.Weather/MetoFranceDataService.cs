@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -9,13 +10,9 @@ namespace MS.Experiences.Weather
     {
         private readonly WeatherOptions _options;
 
-        public MeteoFranceDataService()
+        public MeteoFranceDataService(IOptions<WeatherOptions> options)
         {
-            _options = new WeatherOptions
-            {
-                TemperatureMax = Int32.Parse(ConfigurationManager.AppSettings["TemperatureMaximum"]),
-                TemprateurMin = Int32.Parse(ConfigurationManager.AppSettings["TemperatureMinimum"])
-            };
+            _options = options.Value;
         }
 
         public IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
