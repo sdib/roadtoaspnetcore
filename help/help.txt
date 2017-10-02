@@ -15,6 +15,13 @@ https://www.nuget.org/packages/Microsoft.AspNetCore.All/2.0.0
 2 - 
 
 3 - 
+"weather": {
+	"temparatureMin": 0,
+	"temparatureMax": 25
+}
+
+services.AddOptions();
+services.Configure<Weather.WeatherOptions>(Configuration.GetSection("weather"));
 
 4 ----------------------------
 
