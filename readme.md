@@ -5,11 +5,9 @@ Upgrade from dotnet4.5.2 + ASP.NET Mvc5 + WebApi + angularjs(es5) => dotnet4.6.1
 
 # Prerequiste
 Go to https://github.com/dotnet/core/blob/master/release-notes/download-archive.md
-1. Install .NET Core 1.1 (Last version with LTS)
-2. Install .NET Core 2.0
+1. Install .NET Core 2.0 (Last version with LTS)
 
 # Get it in my project
 1. clone this project
 2. go to src/MSExperience.Web
 3. run "npm install" command
-

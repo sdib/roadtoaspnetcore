@@ -74,20 +74,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IWeatherDataServiceFactory.cs" />
     <Compile Include="IWeatherForecastService.cs" />
-    <Compile Include="MeteoBelgiqueDataService.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="WeatherDataServiceFactory.cs" />
     <Compile Include="MetoFranceDataService.cs" />
-    <Compile Include="MeteoMockDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeatherForecastServices.cs" />
     <Compile Include="WeatherForecast.cs" />
+    <Compile Include="WeatherOptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
