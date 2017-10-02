@@ -1,0 +1,36 @@
+1 - Préparation migration Message : On peut faire tourner ASPNETCore 2 sur du .NET Full fwk
+
+Dotnet new mvc 
+On souhaite rester sur du Full
+Table de mapping -> 461
+dotnet build 
+erreur => voir le lien https://www.nuget.org/packages/Microsoft.AspNetCore.All/2.0.0
+Parler du méta package pro / cons 
+
+ajuster le csproj 
+    <TargetFramework>net461</TargetFramework>
+
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
+	
+	<DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
+
+2 - Middleware Message : Injection de dépendance est au coeur de ASP.NET Core
+Comparaison avec avant 
+Facilité de migration d'un middleware owin vers ASP.NET Core
+Point de vigilence sur l'injection ctor ou invoke qui impacte le cycle de vie des dépendances
+
+3 - Configuration Message : simplification et branchée sur l'injection de dépendances
+Constat avant => ConfigurationManager avec les inconvénients que ça a 
+Migration vers IOptions<>
+Code plus testable et plus propre
+
+4 - MVC / WebAPI Message : Fusion des deux pipelines et chaines d'héritage
+Migration facile 
+Reprise du code JS via copier / coller
+tag helper utile asp-append-version
+
+5 - Javascript services : Message : adapté au dev moderne 
+automatisation des tâches récurentes 
