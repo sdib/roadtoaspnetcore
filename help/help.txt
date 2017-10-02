@@ -16,21 +16,14 @@ https://www.nuget.org/packages/Microsoft.AspNetCore.All/2.0.0
 
 3 - 
 
-4 - 
+4 ----------------------------
 
-5 - 
+<script sc="~/dist/app.bundle.js" asp-append-version="true" ></script>
 
-
-npm install --save webpack-hot-middleware
+5 ----------------------------
 
 using Microsoft.AspNetCore.SpaServices.Webpack;
 
 app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions {
     HotModuleReplacement = true
 });
-
-https://github.com/aspnet/JavaScriptServices/tree/dev/src/Microsoft.AspNetCore.SpaServices#webpack-hot-module-replacement
-
-if (module['hot']) {
-    module['hot'].accept();
-} 
