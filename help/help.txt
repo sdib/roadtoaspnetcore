@@ -8,7 +8,8 @@ https://www.nuget.org/packages/Microsoft.AspNetCore.All/2.0.0
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
-	
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="2.0.0" />	
+
 	<DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
 
 2 - 
@@ -19,3 +20,17 @@ https://www.nuget.org/packages/Microsoft.AspNetCore.All/2.0.0
 
 5 - 
 
+
+npm install --save webpack-hot-middleware
+
+using Microsoft.AspNetCore.SpaServices.Webpack;
+
+app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions {
+    HotModuleReplacement = true
+});
+
+https://github.com/aspnet/JavaScriptServices/tree/dev/src/Microsoft.AspNetCore.SpaServices#webpack-hot-module-replacement
+
+if (module['hot']) {
+    module['hot'].accept();
+} 
