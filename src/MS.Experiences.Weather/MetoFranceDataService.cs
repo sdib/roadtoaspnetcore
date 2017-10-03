@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Options;
+﻿//using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,15 +14,24 @@ namespace MS.Experiences.Weather
         {
             _options = new WeatherOptions
             {
+                TemperatureMax = 50,
+                TemprateurMin = 0
+            };
+        }
+
+        /*public MeteoFranceDataService()
+        {
+            _options = new WeatherOptions
+            {
                 TemperatureMax = int.Parse(ConfigurationManager.AppSettings["TemperatureMaximum"]),
                 TemprateurMin = int.Parse(ConfigurationManager.AppSettings["TemperatureMinimum"])
             };
-        }
-        
-        //public MeteoFranceDataService(IOptions<WeatherOptions> options)
-        //{
-        //    _options = options.Value;
-        //}
+        }*/
+
+        /*public MeteoFranceDataService(IOptions<WeatherOptions> options)
+        {
+            _options = options.Value;
+        }*/
 
         public IEnumerable<WeatherForecast> GetWeatherForecasts(int startDateIndex)
         {
