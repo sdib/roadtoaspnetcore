@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 //using MS.Experiences.Weather;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 
-namespace MS.Experiences.Web.Core
+namespace MS.Experiences.AspNetCore.Web
 {
     public class Startup
     {
