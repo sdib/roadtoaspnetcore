@@ -5,8 +5,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-//using MS.Experiences.Weather;
-using Microsoft.AspNetCore.SpaServices.Webpack;
 
 namespace MS.Experiences.AspNetCore.Web
 {
