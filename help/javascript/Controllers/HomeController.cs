@@ -1,4 +1,4 @@
-﻿using log4net;
+﻿
 using System.Web.Mvc;
 
 namespace MS.Experiences.Web.Controllers
