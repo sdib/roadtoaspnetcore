@@ -20,4 +20,4 @@ Go to https://github.com/dotnet/core/blob/master/release-notes/download-archive.
 
 # Slides can be found here
 
-// TODO
+https://github.com/sdib/roadtoaspnetcore/raw/master/DevDay%20-%20ASP.NET%20Core.pdf
